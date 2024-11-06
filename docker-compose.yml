@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  first_crud:
+    build:
+      context : .
+      dockerfile : Dockerfile
+
+    env_file : .env
+    stdin_open : true
+    tty : true        
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
